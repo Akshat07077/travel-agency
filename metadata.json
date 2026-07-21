@@ -1,0 +1,6 @@
+{
+  "name": "WanderLuxe Travel Agency",
+  "description": "A luxury, conversion-focused travel agency platform with packages, visa services, custom trip planning, flights, hotels, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
