@@ -51,7 +51,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
   };
 
   return (
-    <section className="relative bg-slate-950 text-white pt-10 pb-20 lg:pb-28 overflow-visible">
+    <section className="relative bg-slate-950 text-white pt-8 sm:pt-10 pb-16 sm:pb-20 lg:pb-28 overflow-hidden">
       {/* Background Image with Blue & Teal Ambient Overlays */}
       <div className="absolute inset-0 z-0">
         <img
@@ -63,44 +63,44 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 via-slate-900/75 to-teal-900/60 z-10"></div>
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-20 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Top Hero Heading */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-teal-500/30 text-teal-300 text-xs sm:text-sm font-semibold shadow-lg backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-teal-400" />
-            <span>Curated Luxury Experiences & Bespoke Itineraries</span>
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4 mb-6 sm:mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-blue-950/80 border border-teal-500/30 text-teal-300 text-[11px] sm:text-sm font-semibold shadow-lg backdrop-blur-md max-w-full">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-400 shrink-0" />
+            <span className="truncate">Curated Luxury Experiences</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight px-1">
             Escape to the <span className="text-teal-300 italic font-serif">Extraordinary</span>
           </h1>
 
-          <p className="text-blue-50 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-            Handcrafted luxury vacations, private villa retreats, and seamless international journeys crafted for the discerning traveler.
+          <p className="text-blue-50 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed px-1">
+            Handcrafted luxury vacations, private villa retreats, and seamless international journeys.
           </p>
         </div>
 
         {/* Multi-Tab Search Widget */}
-        <div className="bg-white p-3 rounded-2xl shadow-2xl border border-slate-100 text-slate-800 max-w-4xl mx-auto">
+        <div className="bg-white p-2.5 sm:p-3 rounded-2xl shadow-2xl border border-slate-100 text-slate-800 max-w-4xl mx-auto">
           {/* Search Tabs Header */}
-          <div className="flex items-center gap-1 sm:gap-2 border-b border-slate-100 pb-2 overflow-x-auto scrollbar-none mb-3">
+          <div className="flex items-center gap-1 sm:gap-2 border-b border-slate-100 pb-2 overflow-x-auto scrollbar-none mb-3 -mx-0.5 px-0.5">
             <button
               type="button"
               onClick={() => setActiveSearchTab('packages')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
                 activeSearchTab === 'packages'
                   ? 'bg-blue-900 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               <Compass className="w-4 h-4" />
-              <span>Tour Packages</span>
+              <span>Packages</span>
             </button>
 
             <button
               type="button"
               onClick={() => setActiveSearchTab('flights')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
                 activeSearchTab === 'flights'
                   ? 'bg-blue-900 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-50'
@@ -113,7 +113,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
             <button
               type="button"
               onClick={() => setActiveSearchTab('hotels')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
                 activeSearchTab === 'hotels'
                   ? 'bg-blue-900 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-50'
@@ -126,27 +126,27 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
             <button
               type="button"
               onClick={() => setActiveSearchTab('planner')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
                 activeSearchTab === 'planner'
                   ? 'bg-teal-600 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               <Sparkles className="w-4 h-4 text-amber-300" />
-              <span>AI Planner</span>
+              <span>Planner</span>
             </button>
 
             <button
               type="button"
               onClick={() => setActiveSearchTab('visa')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer shrink-0 ${
                 activeSearchTab === 'visa'
                   ? 'bg-blue-900 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-50'
               }`}
             >
               <FileText className="w-4 h-4" />
-              <span>Visa Services</span>
+              <span>Visa</span>
             </button>
           </div>
 
@@ -318,56 +318,56 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
         </div>
 
         {/* Quick Categories Banner Floating Below Hero */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 z-30 relative">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mt-6 sm:mt-8 z-30 relative">
           <div
             onClick={() => setCurrentTab('packages')}
-            className="bg-white p-4 rounded-xl shadow-md flex items-center gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
+            className="bg-white p-3 sm:p-4 rounded-xl shadow-md flex items-center gap-2.5 sm:gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
           >
-            <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shrink-0 font-bold">
-              <Compass className="w-6 h-6" />
+            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shrink-0 font-bold">
+              <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <div className="font-bold text-slate-800 text-sm">Honeymoon</div>
-              <div className="text-xs text-slate-400">120+ Luxury Packages</div>
+            <div className="min-w-0">
+              <div className="font-bold text-slate-800 text-xs sm:text-sm truncate">Honeymoon</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">120+ Packages</div>
             </div>
           </div>
 
           <div
             onClick={() => setCurrentTab('visa')}
-            className="bg-white p-4 rounded-xl shadow-md flex items-center gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
+            className="bg-white p-3 sm:p-4 rounded-xl shadow-md flex items-center gap-2.5 sm:gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
           >
-            <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 font-bold">
-              <FileText className="w-6 h-6" />
+            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shrink-0 font-bold">
+              <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <div className="font-bold text-slate-800 text-sm">Visa Services</div>
-              <div className="text-xs text-slate-400">45+ Countries Covered</div>
+            <div className="min-w-0">
+              <div className="font-bold text-slate-800 text-xs sm:text-sm truncate">Visa Services</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">45+ Countries</div>
             </div>
           </div>
 
           <div
             onClick={() => setCurrentTab('group-tours')}
-            className="bg-white p-4 rounded-xl shadow-md flex items-center gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
+            className="bg-white p-3 sm:p-4 rounded-xl shadow-md flex items-center gap-2.5 sm:gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
           >
-            <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-amber-600 shrink-0 font-bold">
-              <Users className="w-6 h-6" />
+            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-amber-50 rounded-full flex items-center justify-center text-amber-600 shrink-0 font-bold">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <div className="font-bold text-slate-800 text-sm">Corporate & Groups</div>
-              <div className="text-xs text-slate-400">Global Events & Retreats</div>
+            <div className="min-w-0">
+              <div className="font-bold text-slate-800 text-xs sm:text-sm truncate">Groups</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">Corporate & Retreats</div>
             </div>
           </div>
 
           <div
             onClick={() => setCurrentTab('packages')}
-            className="bg-white p-4 rounded-xl shadow-md flex items-center gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
+            className="bg-white p-3 sm:p-4 rounded-xl shadow-md flex items-center gap-2.5 sm:gap-4 border border-slate-100 cursor-pointer hover:shadow-lg transition-all"
           >
-            <div className="w-12 h-12 bg-rose-50 rounded-full flex items-center justify-center text-rose-600 shrink-0 font-bold">
-              <Sparkles className="w-6 h-6" />
+            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-rose-50 rounded-full flex items-center justify-center text-rose-600 shrink-0 font-bold">
+              <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <div className="font-bold text-slate-800 text-sm">Adventure Trails</div>
-              <div className="text-xs text-slate-400">80+ Curated Expeditions</div>
+            <div className="min-w-0">
+              <div className="font-bold text-slate-800 text-xs sm:text-sm truncate">Adventure</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">80+ Expeditions</div>
             </div>
           </div>
         </div>

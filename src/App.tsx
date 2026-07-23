@@ -135,7 +135,7 @@ export default function App() {
   const comparedPackages = packages.filter(p => comparedIds.includes(p.id));
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans flex flex-col justify-between selection:bg-sky-500 selection:text-white">
+    <div className="min-h-dvh bg-slate-50 text-slate-800 font-sans flex flex-col justify-between selection:bg-sky-500 selection:text-white overflow-x-hidden pb-14 sm:pb-0">
       {/* Navigation Bar */}
       <Header
         currentTab={currentTab}
@@ -264,7 +264,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer setCurrentTab={setCurrentTab} />
+      <Footer setCurrentTab={setCurrentTab} openEnquiryModal={openEnquiryModal} />
 
       {/* Package Details Modal */}
       <PackageDetailsModal

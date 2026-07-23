@@ -163,9 +163,9 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentTab, openEnquiryModal 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left pb-[max(0,env(safe-area-inset-bottom))] sm:pb-0">
           <p>© 2026 WanderLuxe Travel Agency Inc. All Rights Reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-6">
             <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-slate-400 cursor-pointer">Terms & Conditions</span>
             <span className="hover:text-slate-400 cursor-pointer">Cancellation Policy</span>

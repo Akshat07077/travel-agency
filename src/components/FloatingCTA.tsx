@@ -37,16 +37,17 @@ export const FloatingCTA: React.FC<FloatingCTAProps> = ({ openEnquiryModal }) =>
   return (
     <>
       {/* Fixed Floating Action Buttons (Right Bottom) */}
-      <div className="fixed bottom-20 sm:bottom-6 right-4 z-40 flex flex-col gap-3 animate-fadeIn">
+      <div className="fixed bottom-[4.75rem] sm:bottom-6 right-3 sm:right-4 z-40 flex flex-col gap-2.5 animate-fadeIn">
         {/* Instant Callback Button */}
         <button
           onClick={() => setCallbackOpen(true)}
-          className="group flex items-center gap-2 bg-slate-900 text-white px-4 py-3 rounded-full shadow-2xl border border-slate-700 hover:bg-slate-800 cursor-pointer transition transform hover:scale-105"
+          className="group flex items-center gap-2 bg-slate-900 text-white p-2.5 sm:px-4 sm:py-3 rounded-full shadow-2xl border border-slate-700 hover:bg-slate-800 cursor-pointer transition transform hover:scale-105"
+          aria-label="Request callback"
         >
-          <div className="w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center animate-bounce">
+          <div className="w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center">
             <Phone className="w-4 h-4" />
           </div>
-          <span className="hidden md:inline font-bold text-xs tracking-wide">Call Me Back</span>
+          <span className="hidden md:inline font-bold text-xs tracking-wide pr-1">Call Me Back</span>
         </button>
 
         {/* WhatsApp Button */}
@@ -54,28 +55,29 @@ export const FloatingCTA: React.FC<FloatingCTAProps> = ({ openEnquiryModal }) =>
           href="https://wa.me/18005558692?text=Hello%20WanderLuxe%20Travel!%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package."
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-emerald-600 text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl hover:bg-emerald-500 cursor-pointer transition transform hover:scale-105"
+          className="flex items-center gap-2 bg-emerald-600 text-white p-2.5 sm:px-4 sm:py-3 rounded-full shadow-2xl hover:bg-emerald-500 cursor-pointer transition transform hover:scale-105"
+          aria-label="WhatsApp us"
         >
           <MessageSquare className="w-5 h-5 fill-white" />
-          <span className="hidden md:inline font-bold text-xs tracking-wide">WhatsApp Us</span>
+          <span className="hidden md:inline font-bold text-xs tracking-wide pr-1">WhatsApp Us</span>
         </a>
       </div>
 
       {/* Mobile Sticky Bottom Conversion Bar */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 text-white border-t border-slate-800 p-3 flex items-center justify-between gap-2 shadow-2xl">
-        <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-teal-400" />
-          <div className="text-left">
-            <div className="font-bold text-xs text-white">Need Customized Quotes?</div>
-            <div className="text-[10px] text-teal-300">Speak to an Expert in 60s</div>
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 text-white border-t border-slate-800 px-3 py-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] flex items-center justify-between gap-2 shadow-2xl">
+        <div className="flex items-center gap-2 min-w-0">
+          <Sparkles className="w-5 h-5 text-teal-400 shrink-0" />
+          <div className="text-left min-w-0">
+            <div className="font-bold text-xs text-white truncate">Need a custom quote?</div>
+            <div className="text-[10px] text-teal-300">Expert reply in 60s</div>
           </div>
         </div>
 
         <button
           onClick={() => openEnquiryModal('General')}
-          className="px-4 py-2 bg-gradient-to-r from-sky-500 to-teal-500 text-slate-950 font-extrabold rounded-xl text-xs"
+          className="shrink-0 px-3.5 py-2 bg-gradient-to-r from-sky-500 to-teal-500 text-slate-950 font-extrabold rounded-xl text-xs"
         >
-          Inquire Now
+          Inquire
         </button>
       </div>
 
